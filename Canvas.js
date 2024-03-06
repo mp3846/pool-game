@@ -4,8 +4,8 @@ class Canvas2D {
   constructor() {
     this._canvas = document.getElementById('screen');
     this._ctx = this._canvas.getContext('2d'); // drawing context on the canvas -- 2D
-    this._player1 = document.getElementById('player1');
-    this._player2 = document.getElementById('player2');
+    this._player1 = document.getElementById('player1-score');
+    this._player2 = document.getElementById('player2-score')
     this._player1Title = document.getElementById('player1-title');
     this._player2Title = document.getElementById('player2-title');
     this._gameText = document.getElementById('game-text');

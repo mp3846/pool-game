@@ -1,5 +1,6 @@
 const initalStoredData = {
 	totalGames: 0,
+	lastWinner: '',
 	player1: { username: 'player1', winCount: 0 },
 	player2: { username: 'player2', winCount: 0 }
 }
