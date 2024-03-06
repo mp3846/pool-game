@@ -204,6 +204,25 @@ class GameWorld {
 				this.blackBallFoul = true
 			} else {
 				currentPlayer.winner = true
+				const prevData = extractData('e8tBallData')
+				const e8tBallData = {
+					totalGames: prevData.totalGames + 1,
+					lastWinner: currentPlayer.player,
+					player1: {
+						username: this.players[0].player,
+						winCount:
+							prevData.player1.winCount +
+							(currentPlayer.player === prevData.player1.username ? 1 : 0)
+					},
+					player2: {
+						username: this.players[1].player,
+						winCount:
+							prevData.player2.winCount +
+							(currentPlayer.player === prevData.player2.username ? 1 : 0)
+					}
+				}
+
+				storeData('e8tBallData', e8tBallData)
 			}
 		}
 
